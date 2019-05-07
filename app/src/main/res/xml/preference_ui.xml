@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <PreferenceCategory android:title="@string/setting_title_behavior">
+
+        <CheckBoxPreference android:key="sp_background"
+            android:icon="@drawable/icon_link"
+            android:defaultValue="true"
+            android:title="@string/setting_title_background"
+            android:summary="@string/setting_summary_background"/>
+
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:icon="@drawable/icon_exit"
+            android:key="sp_close_browser_confirm"
+            android:title="@string/setting_title_confirm_exit"
+            android:summary="@string/setting_summary_confirm_exit" />
+
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:icon="@drawable/icon_close"
+            android:key="sp_close_tab_confirm"
+            android:title="@string/setting_title_confirm_tab_close"
+            android:summary="@string/setting_summary_confirm_tab_close" />
+
+        <CheckBoxPreference android:key="sp_reopenLastTab"
+            android:icon="@drawable/icon_tab_plus"
+            android:defaultValue="false"
+            android:title="@string/setting_title_reopenLastTab"
+            android:summary="@string/setting_summary_reopenLastTab"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/setting_title_theme">
+
+        <CheckBoxPreference
+            android:key="sp_themeColor"
+            android:icon="@drawable/icon_changecolor"
+            android:defaultValue="true"
+            android:title="@string/setting_title_themeColor"
+            android:summary="@string/setting_summary_themeColor"/>
+
+        <CheckBoxPreference
+            android:key="sp_lightUI"
+            android:icon="@drawable/icon_ui"
+            android:defaultValue="false"
+            android:title="@string/setting_title_themeDark"
+            android:summary="@string/setting_summary_themeDark"/>
+
+        <ListPreference
+            android:icon="@drawable/icon_size"
+            android:key="sp_fontSize"
+            android:defaultValue="100"
+            android:title="@string/setting_title_font"
+            android:summary="@string/setting_summary_font"
+            android:entries="@array/setting_entries_font"
+            android:entryValues="@array/setting_values_font"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/setting_title_toolbar">
+
+        <CheckBoxPreference android:key="sp_toolbarShow"
+            android:icon="@drawable/icon_show"
+            android:defaultValue="false"
+            android:title="@string/setting_title_toolbarShow"
+            android:summary="@string/setting_summary_toolbarShow"/>
+
+        <ListPreference
+            android:title="@string/setting_title_hideToolbar"
+            android:icon="@drawable/icon_fullscreen"
+            android:summary="@string/setting_summary_hide"
+            android:key="sp_hideToolbar"
+            android:defaultValue="0"
+            android:entries="@array/setting_entries_toolbar"
+            android:entryValues="@array/setting_values_toolbar" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/setting_overView">
+
+        <CheckBoxPreference android:key="overView_hide"
+            android:icon="@drawable/view_headline"
+            android:defaultValue="false"
+            android:title="@string/setting_overView_hide_title"
+            android:summary="@string/setting_overView_hide_summary"/>
+
+        <CheckBoxPreference android:key="start_tabStart"
+            android:icon="@drawable/icon_restart"
+            android:defaultValue="false"
+            android:title="@string/setting_overView_onStart_title"
+            android:summary="@string/setting_overView_onStart_summary"/>
+
+        <ListPreference
+            android:title="@string/setting_overView"
+            android:icon="@drawable/icon_preview"
+            android:summary="@string/setting_summary_tab"
+            android:key="start_tab"
+            android:defaultValue="0"
+            android:entries="@array/setting_entries_tab"
+            android:entryValues="@array/setting_values_tab" />
+
+    </PreferenceCategory>
+
+
+    <PreferenceCategory android:title="@string/setting_title_nav">
+
+        <ListPreference
+            android:title="@string/setting_title_nav_show"
+            android:icon="@drawable/icon_eye_off"
+            android:summary="@string/setting_summary_nav_show"
+            android:key="sp_hideNav"
+            android:defaultValue="0"
+            android:entries="@array/setting_entries_nav"
+            android:entryValues="@array/setting_values_nav" />
+
+        <ListPreference
+            android:title="@string/setting_title_nav_pos"
+            android:icon="@drawable/icon_arrow_expand"
+            android:summary="@string/setting_summary_nav_pos"
+            android:key="nav_position"
+            android:defaultValue="0"
+            android:entries="@array/setting_entries_nav_pos"
+            android:entryValues="@array/setting_values_nav_pos" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

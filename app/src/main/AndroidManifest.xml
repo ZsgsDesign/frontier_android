@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="xyz.johnzhang.frontier.Ninja">
+
+
+    <!-- Permission -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
+
+    <!-- Application -->
+    <application
+        android:label="@string/app_name"
+        android:icon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:allowBackup="true"
+        android:enabled="true"
+        android:largeHeap="true"
+        android:hardwareAccelerated="true"
+        android:usesCleartextTraffic="true"
+        android:fullBackupContent="@xml/backup_descriptor"
+        tools:targetApi="m">
+
+        <!-- Holder -->
+        <activity android:name="xyz.johnzhang.frontier.Activity.HolderActivity"
+                  android:label="@string/app_name"
+                  android:launchMode="singleInstance"
+                  android:excludeFromRecents="true"
+                  android:theme="@android:style/Theme.Translucent.NoTitleBar">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="http" />
+                <data android:scheme="https" />
+            </intent-filter>
+        </activity>
+
+        <service android:name="xyz.johnzhang.frontier.Service.HolderService"
+                 android:label="@string/app_name"
+                 android:icon="@mipmap/ic_launcher"/>
+
+        <!-- BrowserActivity -->
+        <activity android:name="xyz.johnzhang.frontier.Activity.BrowserActivity"
+                  android:label="@string/app_name"
+                  android:launchMode="singleInstance"
+                  android:configChanges="orientation|keyboardHidden|screenSize"
+                  android:windowSoftInputMode="adjustResize|stateAlwaysHidden"
+                  android:theme="@style/AppTheme">
+
+            <intent-filter
+                android:icon="@mipmap/ic_launcher" >
+                <action android:name="android.intent.action.SEND" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="text/plain" />
+            </intent-filter>
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.WEB_SEARCH" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.LAUNCHER"/>
+                <action android:name="sc_startPage" />
+                <action android:name="sc_bookmark" />
+                <action android:name="sc_history" />
+            </intent-filter>
+            <meta-data android:name="android.app.searchable"
+                       android:resource="@xml/searchable"/>
+            <meta-data android:name="android.app.shortcuts"
+                android:resource="@xml/shortcuts" />
+        </activity>
+
+        <!-- Settings -->
+        <activity android:name="xyz.johnzhang.frontier.Activity.Settings_Activity"
+            android:label="@string/setting_label"
+            android:theme="@style/AppTheme"/>
+
+        <activity android:name="xyz.johnzhang.frontier.Activity.Whitelist_AdBlock"
+            android:label="@string/setting_title_whitelist"
+            android:theme="@style/AppTheme"/>
+
+        <activity android:name="xyz.johnzhang.frontier.Activity.Whitelist_Javascript"
+            android:label="@string/setting_title_whitelistJS"
+            android:theme="@style/AppTheme"/>
+
+        <activity android:name="xyz.johnzhang.frontier.Activity.Whitelist_Cookie"
+            android:label="@string/setting_title_whitelistCookie"
+            android:theme="@style/AppTheme"/>
+
+        <activity android:name="xyz.johnzhang.frontier.Activity.Settings_ClearActivity"
+            android:label="@string/setting_title_clear_control"
+            android:theme="@style/AppTheme"/>
+
+        <activity android:name="xyz.johnzhang.frontier.Activity.Settings_StartActivity"
+            android:label="@string/setting_title_start_control"
+            android:theme="@style/AppTheme"/>
+
+        <activity android:name="xyz.johnzhang.frontier.Activity.Settings_DataActivity"
+            android:label="@string/setting_title_data"
+            android:theme="@style/AppTheme"/>
+
+        <activity android:name="xyz.johnzhang.frontier.Activity.Settings_UIActivity"
+            android:label="@string/setting_title_ui"
+            android:theme="@style/AppTheme"/>
+
+        <activity android:name="xyz.johnzhang.frontier.Activity.Settings_GestureActivity"
+            android:label="@string/setting_gestures"
+            android:theme="@style/AppTheme"/>
+
+        <activity android:name="xyz.johnzhang.frontier.Activity.Settings_FilterActivity"
+            android:label="@string/setting_filter"
+            android:theme="@style/AppTheme"/>
+
+        <!-- ClearService | Provider-->
+        <service android:name="xyz.johnzhang.frontier.Service.ClearService"
+                 android:label="@string/app_name"
+                 android:icon="@mipmap/ic_launcher"/>
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="xyz.johnzhang.frontier.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths"/>
+        </provider>
+
+    </application>
+
+</manifest>
