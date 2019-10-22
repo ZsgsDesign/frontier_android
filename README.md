@@ -1,10 +1,10 @@
 ## Important | Wichtig
 
-This is the default startsite of "Frontier Browser". You can set every bookmark as startsite by longpressing. You can also set an emty
-startpage via the menu in your bookmarklist. PLEASE READ ALSO THE HELP DIALOG FOR FURTHER INSTRUCTIONS.
+This is the default startsite of "Frontier Browser". You can set every bookmark as startsite by longpressing. You can also set an emty startpage via the menu in your bookmarklist. PLEASE READ ALSO THE HELP DIALOG FOR FURTHER INSTRUCTIONS.
 
-Dies ist die Startseite von "Frontier Browser". Jedes Lesezeichen kann durch langes drücken als Startseite gesetzt werden. Im Menü
-deiner Lesezeichenliste kannst du außerdem eine leere Startseite zu setzen. BITTE LIES AUCH DEN HILFE DIALOG FÜR WEITERE HINWEISE.
+Dies ist die Startseite von "Frontier Browser". Jedes Lesezeichen kann durch langes drücken als Startseite gesetzt werden. Im Menü deiner Lesezeichenliste kannst du außerdem eine leere Startseite zu setzen. BITTE LIES AUCH DEN HILFE DIALOG FÜR WEITERE HINWEISE.
+
+这是本浏览器的首页，你可以长按在你的书签列表设置首页甚至设置空白页。你可以阅读帮助获取更多信息。
 
 --------
 
