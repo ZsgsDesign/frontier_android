@@ -14,8 +14,8 @@ deiner Lesezeichenliste kannst du außerdem eine leere Startseite zu setzen. BIT
 permissions. It's a simple Android browser based on webview. The intention is to provide a simple and light weight but powerful
 browser with a nice looking user interface.
 
-<a href="https://f-droid.org/packages/xyz.johnzhang.frontier/" target="_blank">
-<img src="https://f-droid.org/badge/get-it-on.png" alt="Get it on F-Droid" height="80"/></a>
+<!-- <a href="https://f-droid.org/packages/xyz.johnzhang.frontier/" target="_blank">
+<img src="https://f-droid.org/badge/get-it-on.png" alt="Get it on F-Droid" height="80"/></a> -->
 
 
 ### Links:
@@ -23,9 +23,6 @@ browser with a nice looking user interface.
 - [Changelog](https://github.com/ZsgsDesign/frontier_android/blob/master/CHANGELOG.md)
 - [Privacy](https://github.com/ZsgsDesign/frontier_android/blob/master/PRIVACY.md)
 - [License](https://github.com/ZsgsDesign/frontier_android/blob/master/LICENSE.md)
-- [Code of conduct](https://github.com/ZsgsDesign/frontier_android/blob/master/CODE_OF_CONDUCT.md)
-- [Screenshots](https://github.com/ZsgsDesign/frontier_android/blob/master/SCREENSHOTS.md)
-- [XDA - Link](http://forum.xda-developers.com/android/apps-games/app-browser-t3500091)
 
 
 ### Security/Data:
